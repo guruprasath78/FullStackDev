@@ -1,0 +1,20 @@
+package com.project.fitra.FitraService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.project.fitra.FitraModel.ProgressModel;
+
+@Service
+public class ProgressService implements ProgressServiceIF {
+	public static List<ProgressModel> L=new ArrayList<>();		
+	
+	@Override
+	public List<ProgressModel> getProgress() {
+		// TODO Auto-generated method stub
+		return L;
+	}
+
+}

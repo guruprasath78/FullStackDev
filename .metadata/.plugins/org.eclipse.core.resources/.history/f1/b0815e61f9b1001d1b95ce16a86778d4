@@ -1,0 +1,11 @@
+package com.project.fitra.FitraService;
+
+
+import java.util.Optional;
+
+import com.project.fitra.FitraModel.FoodDbEntity;
+
+public interface FoodDbIF {
+
+	public Optional<FoodDbEntity> getData(String name);
+}

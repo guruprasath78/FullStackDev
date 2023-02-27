@@ -1,0 +1,5 @@
+package com.project.fitra.Repository;
+
+public interface TrackerRepo {
+
+}

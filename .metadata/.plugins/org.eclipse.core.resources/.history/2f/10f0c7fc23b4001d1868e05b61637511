@@ -1,0 +1,9 @@
+package com.project.fitra.FitraService;
+
+import java.util.List;
+
+import com.project.fitra.FitraEntity.LinkEntity;
+
+public interface LinkServiceIf {
+       public List<LinkEntity>getLinkDetails();
+}

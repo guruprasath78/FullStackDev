@@ -1,0 +1,22 @@
+package com.project.fitra.FitraController;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.project.fitra.FitraEntity.SiginupEntity;
+import com.project.fitra.FitraService.SignupService;
+
+@RestController
+public class SignupController {
+	@Autowired
+	SignupService obj;
+	
+	@GetMapping("/getsignup")
+	public List<SiginupEntity>get()
+	{
+		return obj.getsignupDetails();
+	}
+}

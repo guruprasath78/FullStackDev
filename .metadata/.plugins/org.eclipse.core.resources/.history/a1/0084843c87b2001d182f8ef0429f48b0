@@ -1,0 +1,30 @@
+package com.project.fitra.FitraModel;
+
+public class LoginModel {
+    @Override
+	public String toString() {
+		return "LoginModel [emailid=" + emailid + ", password=" + password + ", getEmailid()=" + getEmailid()
+				+ ", getPassword()=" + getPassword() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	public LoginModel(String emailid, String password) {
+		super();
+		this.emailid = emailid;
+		this.password = password;
+	}
+	
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	private String emailid;
+    private String password;
+}

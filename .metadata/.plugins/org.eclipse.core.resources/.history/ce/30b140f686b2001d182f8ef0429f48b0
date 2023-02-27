@@ -1,0 +1,9 @@
+package com.project.fitra.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.fitra.FitraEntity.LoginEntity;
+
+public interface LoginRepositoryIF extends JpaRepository<LoginEntity,Integer>{
+
+}

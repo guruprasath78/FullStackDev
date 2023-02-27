@@ -1,0 +1,18 @@
+package com.project.fitra.FitraEntity;
+
+public class LinkEntity {
+      private String link;
+
+	public String getlink() {
+		return link;
+	}
+
+	public LinkEntity(String link) {
+		super();
+		this.link = link;
+	}
+	@Override
+	public String toString() {
+		return "LinkModel [link=" + link + "]";
+	}
+      }

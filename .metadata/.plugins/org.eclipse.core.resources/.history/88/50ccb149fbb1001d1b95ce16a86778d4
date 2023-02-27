@@ -1,0 +1,18 @@
+package com.project.fitra.FitraModel;
+
+public class LinkModel {
+      private String link1;
+
+	public String getLink1() {
+		return link1;
+	}
+
+	public LinkModel(String link1) {
+		super();
+		this.link1 = link1;
+	}
+	@Override
+	public String toString() {
+		return "LinkModel [link1=" + link1 + "]";
+	}
+      }

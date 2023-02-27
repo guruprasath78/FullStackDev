@@ -1,0 +1,22 @@
+package com.project.fitra.FitraService;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.fitra.FitraModel.FoodDbEntity;
+import com.project.fitra.Repository.FoodDbRepository;
+@Service
+public class FoodDbService implements FoodDbIF {
+	@Autowired
+	FoodDbRepository obj;
+	@Override
+	public List<FoodDbEntity> getData(String name) {
+		// TODO Auto-generated method stub
+		return obj.findAll();
+	}
+	public void
+
+}

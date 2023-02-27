@@ -1,0 +1,115 @@
+package com.project.fitra.FitraModel;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ProgressModel {
+@JsonProperty
+int Monday;
+@JsonProperty
+int Tuesday;
+@JsonProperty
+int Wednesday;
+@JsonProperty
+int Thursday;
+@JsonProperty
+int Friday;
+@JsonProperty
+int Saturday;
+@JsonProperty
+int Sunday;
+
+int Average_Calories=(Monday+Tuesday+Wednesday+Thursday+Friday+Saturday+Sunday)/7;
+@JsonProperty("Monday")
+public int getMonday() {
+	return Monday;
+}
+public void setMonday(int monday) {
+	Monday = monday;
+}
+@JsonProperty("Tuesday")
+public int getTuesday() {
+	return Tuesday;
+}
+public void setTuesday(int tuesday) {
+	Tuesday = tuesday;
+}
+@JsonProperty("Wednesday")
+public int getWednesday() {
+	return Wednesday;
+}
+public void setWednesday(int wednesday) {
+	Wednesday = wednesday;
+}
+@JsonProperty("Thursday")
+public int getThursday() {
+	return Thursday;
+}
+public void setThursday(int thursday) {
+	Thursday = thursday;
+}
+@JsonProperty("Friday")
+public int getFriday() {
+	return Friday;
+}
+public void setFriday(int friday) {
+	Friday = friday;
+}
+@JsonProperty("Saturday")
+public int getSaturday() {
+	return Saturday;
+}
+public void setSaturday(int saturday) {
+	Saturday = saturday;
+}
+@JsonProperty("Sunday")
+public int getSunday() {
+	return Sunday;
+}
+public void setSunday(int sunday) {
+	Sunday = sunday;
+}
+@Override
+public String toString() {
+	return "ProgressModel [Monday=" + Monday + ", Tuesday=" + Tuesday + ", Wednesday=" + Wednesday + ", Thursday="
+			+ Thursday + ", Friday=" + Friday + ", Saturday=" + Saturday + ", Sunday=" + Sunday + ", Average_Calories="
+			+ Average_Calories + ", Target_Calories=" + Target_Calories + ", Maintanence_Calories="
+			+ Maintanence_Calories + ", Weightloss_in_kg=" + Weightloss_in_kg + "]";
+}
+@JsonProperty("Target Calories")
+public int getTarget_Calories() {
+	return Target_Calories;
+}
+public ProgressModel(int monday, int tuesday, int wednesday, int thursday, int friday, int saturday, int sunday,
+		int target_Calories, int maintanence_Calories) {
+	super();
+	Monday = monday;
+	Tuesday = tuesday;
+	Wednesday = wednesday;
+	Thursday = thursday;
+	Friday = friday;
+	Saturday = saturday;
+	Sunday = sunday;
+	Target_Calories = target_Calories;
+	Maintanence_Calories = maintanence_Calories;
+	Average_Calories=(Monday+Tuesday+Wednesday+Thursday+Friday+Saturday+Sunday)/7;
+	Weightloss_in_kg=(float) (((Maintanence_Calories-Average_Calories)*7.0)/7700.0);
+	//Weightloss_in_kg=0.7;
+}
+public void setTarget_Calories(int target_Calories) {
+	Target_Calories = target_Calories;
+}
+@JsonProperty("Maintanence Calories")
+public int getMaintanence_Calories() {
+	return Maintanence_Calories;
+}
+@JsonProperty("Maintanence Calories")
+public void setMaintanence_Calories(int maintanence_Calories) {
+	Maintanence_Calories = maintanence_Calories;
+}
+@JsonProperty("Target Calories")
+int Target_Calories;
+int Maintanence_Calories;
+@JsonProperty("Weight Lost (Kg)")
+float Weightloss_in_kg=(float) (((Maintanence_Calories-Average_Calories)*7.0)/7700);
+
+}

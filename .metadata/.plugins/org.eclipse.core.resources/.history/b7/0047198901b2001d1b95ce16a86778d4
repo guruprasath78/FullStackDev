@@ -1,0 +1,42 @@
+package com.project.fitra.FitraModel;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class TrackerModel {
+
+	int Target_Calories;)
+	int Had_Calories;
+	int Remaining_Calories=Target_Calories-Had_Calories;
+	public int getTarget_Calories() {
+		return Target_Calories;
+	}
+	public void setTarget_Calories(int target_Calories) {
+		Target_Calories = target_Calories;
+	}
+	public int getHad_Calories() {
+		return Had_Calories;
+	}
+	public void setHad_Calories(int had_Calories) {
+		Had_Calories = had_Calories;
+	}
+	public int getRemaining_Calories() {
+		return Remaining_Calories;
+	}
+	public TrackerModel(int target_Calories, int had_Calories) {
+		super();
+		Target_Calories = target_Calories;
+		Had_Calories = had_Calories;
+		Remaining_Calories=Target_Calories-Had_Calories;
+	}
+	public void addCalories(int n)
+	{
+		Remaining_Calories-=n;
+		Had_Calories+=n;
+	}
+	@Override
+	public String toString() {
+		return "TrackerModel [Target_Calories=" + Target_Calories + ", Had_Calories=" + Had_Calories
+				+ ", Remaining_Calories=" + Remaining_Calories + "]";
+	}
+	
+}

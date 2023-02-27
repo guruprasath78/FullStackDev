@@ -1,0 +1,19 @@
+package com.project.fitra.FitraService;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.project.fitra.FitraModel.TrackerModel;
+
+@Service
+public class TrackerService implements TrackerServiceIF {
+	
+	@Override
+	public List<TrackerModel> getTracker() {
+		// TODO Auto-generated method stub
+		return L;
+	}
+	
+
+}

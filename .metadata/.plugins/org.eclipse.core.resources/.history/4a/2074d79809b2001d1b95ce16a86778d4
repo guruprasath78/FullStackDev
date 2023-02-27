@@ -1,0 +1,147 @@
+package com.project.fitra.FitraModel;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="progress")
+public class ProgressModel {
+	@Id
+	String email;
+@JsonProperty
+Integer Monday;
+@JsonProperty
+Integer Tuesday;
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public Integer getAverage_Calories() {
+	return Average_Calories;
+}
+public void setAverage_Calories(Integereger average_Calories) {
+	Average_Calories = average_Calories;
+}
+public float getWeightloss_in_kg() {
+	return Weightloss_in_kg;
+}
+public void setWeightloss_in_kg(float weightloss_in_kg) {
+	Weightloss_in_kg = weightloss_in_kg;
+}
+
+@JsonProperty
+Integer Wednesday;
+@JsonProperty
+Integer Thursday;
+@JsonProperty
+Integer Friday;
+@JsonProperty
+Integer Saturday;
+@JsonProperty
+Integer Sunday;
+
+Integer Average_Calories=(Monday+Tuesday+Wednesday+Thursday+Friday+Saturday+Sunday)/7;
+@JsonProperty("Monday")
+public Integer getMonday() {
+	return Monday;
+}
+public void setMonday(Integer monday) {
+	Monday = monday;
+}
+@JsonProperty("Tuesday")
+public Integer getTuesday() {
+	return Tuesday;
+}
+public void setTuesday(Integer tuesday) {
+	Tuesday = tuesday;
+}
+@JsonProperty("Wednesday")
+public Integer getWednesday() {
+	return Wednesday;
+}
+public void setWednesday(Integer wednesday) {
+	Wednesday = wednesday;
+}
+@JsonProperty("Thursday")
+public Integer getThursday() {
+	return Thursday;
+}
+public void setThursday(Integer thursday) {
+	Thursday = thursday;
+}
+@JsonProperty("Friday")
+public Integer getFriday() {
+	return Friday;
+}
+public void setFriday(Integer friday) {
+	Friday = friday;
+}
+@JsonProperty("Saturday")
+public Integer getSaturday() {
+	return Saturday;
+}
+public void setSaturday(Integer saturday) {
+	Saturday = saturday;
+}
+@JsonProperty("Sunday")
+public Integer getSunday() {
+	return Sunday;
+}
+public void setSunday(Integer sunday) {
+	Sunday = sunday;
+}
+@Override
+public String toString() {
+	return "ProgressModel [Monday=" + Monday + ", Tuesday=" + Tuesday + ", Wednesday=" + Wednesday + ", Thursday="
+			+ Thursday + ", Friday=" + Friday + ", Saturday=" + Saturday + ", Sunday=" + Sunday + ", Average_Calories="
+			+ Average_Calories + ", Target_Calories=" + Target_Calories + ", Maintanace_Calories="
+			+ Maintanace_Calories + ", Weightloss_in_kg=" + Weightloss_in_kg + "]";
+}
+
+public Integer getTarget_Calories() {
+	return Target_Calories;
+}
+public ProgressModel(String email,Integer monday, Integer tuesday, Integer wednesday, Integer thursday, Integer friday, Integer saturday, Integer sunday,
+		Integer target_Calories, Integer Maintanace_Calories) {
+	super();
+	this.email=email;
+	Monday = monday;
+	Tuesday = tuesday;
+	Wednesday = wednesday;
+	Thursday = thursday;
+	Friday = friday;
+	Saturday = saturday;
+	Sunday = sunday;
+	Target_Calories = target_Calories;
+	this.Maintanace_Calories = Maintanace_Calories;
+	Average_Calories=(Monday+Tuesday+Wednesday+Thursday+Friday+Saturday+Sunday)/7;
+	Weightloss_in_kg=(float) (((Maintanace_Calories-Average_Calories)*7.0)/7700.0);
+	//Weightloss_in_kg=0.7;
+}
+public ProgressModel() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public void setTarget_Calories(Integer target_Calories) {
+	Target_Calories = target_Calories;
+}
+
+public Integer getMaintanace_Calories() {
+	return Maintanace_Calories;
+}
+
+public void setMaintanace_Calories(Integer Maintanace_Calories) {
+	Maintanace_Calories = Maintanace_Calories;
+}
+
+Integer Target_Calories;
+Integer Maintanace_Calories;
+
+float Weightloss_in_kg=(float) (((Maintanace_Calories-Average_Calories)*7.0)/7700);
+
+}
