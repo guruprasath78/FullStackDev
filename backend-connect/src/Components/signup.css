@@ -1,0 +1,17 @@
+p{
+    font-size:x-large;
+    text-align: center;
+    color: black;
+    font-style: oblique;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input{
+    border-radius: 10%;
+    color: gray;
+    font-size: x-large;
+
+}
+button{
+    font-size: xx-large;
+    
+}

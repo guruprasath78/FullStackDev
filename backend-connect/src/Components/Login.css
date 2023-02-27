@@ -1,0 +1,23 @@
+button{
+    font-size: xx-large;
+}
+.details
+{
+    text-align: center;
+    background-color: gray;
+    color: aqua;
+}
+.list{
+    background-color:silver;
+    font-size: x-large;
+    color:black;
+}
+Paper
+{
+    padding: 20px;
+    
+}
+.model
+{
+  background-color: blue;
+}
